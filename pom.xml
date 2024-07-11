@@ -1,0 +1,77 @@
+<plugin>
+2
+  <groupId>org.mule.tools.maven</groupId>
+3
+  <artifactId>mule-maven-plugin</artifactId>
+4
+  <version>3.3.1</version>
+5
+  <extensions>true</extensions>
+6
+    <configuration>
+7
+        <cloudHubDeployment>
+8
+            <uri>https://anypoint.mulesoft.com</uri>
+9
+            <muleVersion>${app.runtime}</muleVersion>
+10
+            <username>${anypoint.username}</username>
+11
+            <password>${anypoint.password}</password>
+12
+            <businessGroup>${businessGroup}</businessGroup>
+13
+            <workers>${workers}</workers>
+14
+            <workerType>${workerType}</workerType>
+15
+            <region>us-west-1</region>
+16
+            <environment>${environment}</environment>
+17
+            <applicationName>${applicationName}</applicationName>
+18
+            <properties>
+19
+                <mule.env>${mule.env}</mule.env>
+20
+                <encrypt.key>${encrypt.key}</encrypt.key>                   <anypoint.platform.client_id>${anypoint.platform.client_id}     </anypoint.platform.client_id>      <anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
+21
+                <api.id>${ilg.api.version}</api.id>
+22
+    <anypoint.platform.config.analytics.agent.enabled>true</anypoint.platform.config.analytics.agent.enabled>
+23
+            </properties>
+24
+        </cloudHubDeployment>
+25
+                    <executions>
+26
+                        <execution>
+27
+                            <id>deploy</id>
+28
+                            <goals>
+29
+                                <goal>deploy</goal>
+30
+                            </goals>
+31
+                            <configuration>
+32
+                                <classifier>mule-application</classifier>
+33
+                            </configuration>
+34
+                        </execution>
+35
+                    </executions>
+36
+                    
+37
+                            <classifier>mule-application</classifier>
+38
+                </configuration>
+39
+            </plugin>
